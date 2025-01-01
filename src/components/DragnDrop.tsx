@@ -6,12 +6,12 @@ const DragAndDrop = () => {
   const [boxes, setBoxes] = useState<BoxType[]>([])
 
   const saveArrayToBrowser = (key: string, array: BoxType[]) => {
-    localStorage.setItem(key, JSON.stringify(array)) // Convert the array to a string
+    localStorage.setItem(key, JSON.stringify(array))
   }
 
   const getArrayFromBrowser = (key: string) => {
     const storedArray = localStorage.getItem(key)
-    return storedArray ? JSON.parse(storedArray) : [] // Parse back to an array
+    return storedArray ? JSON.parse(storedArray) : []
   }
 
   const fetchPosts = () => {
